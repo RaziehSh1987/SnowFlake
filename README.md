@@ -133,5 +133,79 @@ As a Data Analyst, you might:
 <img width="750" height="420" alt="image" src="https://github.com/user-attachments/assets/8901e925-abb8-420c-a1a5-a9c84c4cd17b" />
 # SnowFlake Architecture:
 <img width="741" height="209" alt="image" src="https://github.com/user-attachments/assets/0bf5a45d-c5f7-40cf-bff4-0ce4593d9f30" />
+<img width="843" height="481" alt="image" src="https://github.com/user-attachments/assets/7c05cc00-5016-4b4c-9caf-1a021a33870f" />
+
+# Data Warehouse Architectures
+
+## 🔹 Shared-Disk Architecture
+
+### 📌 Description
+All compute nodes share a single centralized storage system.  
+Multiple servers access the same disk.
+
+### ✅ Advantages
+- Simpler architecture
+- Easier data management
+- Strong consistency
+- Good for moderate workloads
+
+### ❌ Disadvantages
+- Storage bottleneck risk
+- Limited horizontal scalability
+- High contention under heavy load
+- Single storage failure impacts system
+
+---
+
+## 🔹 Shared-Nothing Architecture
+
+### 📌 Description
+Each node has its own independent storage and compute.  
+No disk or memory is shared between nodes.
+
+### ✅ Advantages
+- High scalability (horizontal scaling)
+- Strong parallel processing performance
+- Fault isolation
+- Good for large distributed systems
+
+### ❌ Disadvantages
+- Complex data distribution
+- Requires data sharding and rebalancing
+- More difficult consistency management
+- Higher operational complexity
+
+---
+
+## 🔹 Multi-Cluster, Shared-Data Architecture
+
+### 📌 Description
+Centralized storage layer with multiple independent compute clusters.  
+Compute and storage are separated.
+
+### ✅ Advantages
+- Independent scaling of compute and storage
+- No resource contention between workloads
+- High concurrency
+- Better performance isolation
+- Cloud-friendly design
+
+### ❌ Disadvantages
+- Higher infrastructure cost
+- More advanced architecture
+- Vendor-dependent implementations (e.g., Snowflake-style systems)
+
+---
+
+## 🔎 Quick Comparison
+
+| Architecture | Storage Model | Scalability | Complexity | Best For |
+|--------------|--------------|------------|------------|----------|
+| Shared-Disk | Centralized | Moderate | Low | Traditional systems |
+| Shared-Nothing | Distributed | High | Medium-High | Large distributed workloads |
+| Multi-Cluster Shared-Data | Centralized storage + independent compute | Very High | High | Cloud data platforms |
+
+
+
 
 
