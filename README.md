@@ -206,6 +206,10 @@ Compute and storage are separated.
 | Multi-Cluster Shared-Data | Centralized storage + independent compute | Very High | High | Cloud data platforms |
 
 
+<img width="899" height="431" alt="image" src="https://github.com/user-attachments/assets/cd90317a-5560-464c-9751-6aafad3d061f" />
+
+
+
 
 
 
